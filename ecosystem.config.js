@@ -9,10 +9,10 @@ module.exports = {
     // First application
     {
       name      : 'myapp',
-      script    : './app.js',
+      script    : 'app.js',
       cwd: '/home/webApps/suyunfe/current', 
-      error_file: '/home/webApps/suyunfe/logs/app.err.log',
-      out_file: '/home/webApps/suyunfe/logs/app.out.log',
+      // error_file: '/home/webApps/suyunfe/logs/app.err.log',
+      // out_file: '/home/webApps/suyunfe/logs/app.out.log',
       env: {
         COMMON_VARIABLE: 'true'
       },
