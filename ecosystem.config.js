@@ -9,7 +9,7 @@ module.exports = {
     // First application
     {
       name      : 'myapp',
-      script    : 'app.js',
+      script    : './app.js',
       cwd: '/home/webApps/suyunfe/current', 
       error_file: '/home/webApps/suyunfe/logs/app.err.log',
       out_file: '/home/webApps/suyunfe/logs/app.out.log',
@@ -33,7 +33,10 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:antwang/pm2deploy.git',
       path : '/home/webApps/suyunfe',
-      'post-deploy' : 'npm install && pm2 reload current/ecosystem.config.js --env production'
+      'pre-setup' : "echo 'commands or local script path to be run on the host before the setup process starts'",
+      'post-setup': "echo 'commands or a script path to be run on the host after cloning the repo'",
+      'post-deploy' : 'npm install && pm2 startOrRestart current/ecosystem.config.js --env production',
+      'pre-deploy-local' : "echo 'This is a local executed command'"
     },
     dev : {
       user : 'root',
