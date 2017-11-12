@@ -5,10 +5,14 @@ module.exports = {
    */
   apps : [
 
+    
     // First application
     {
       name      : 'myapp',
       script    : 'app.js',
+      cwd: '/home/webApps/suyunfe/current', 
+      error_file: '/home/webApps/suyunfe/logs/app.err.log',
+      out_file: '/home/webApps/suyunfe/logs/app.out.log',
       env: {
         COMMON_VARIABLE: 'true'
       },
