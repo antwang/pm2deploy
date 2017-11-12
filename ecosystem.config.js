@@ -33,7 +33,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:antwang/pm2deploy.git',
       path : '/home/webApps/suyunfe',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 reload current/ecosystem.config.js --env production'
     },
     dev : {
       user : 'root',
@@ -41,7 +41,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:antwang/pm2deploy.git',
       path : '/home/webApps/suyunfe',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
+      'post-deploy' : 'npm install && pm2 reload current/ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
       }
