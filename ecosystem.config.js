@@ -27,16 +27,16 @@ module.exports = {
       user : 'root',
       host : '47.95.6.132',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
+      repo : 'git@github.com:antwang/pm2deploy.git',
       path : '/home/webApps/suyunfe',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
     },
     dev : {
-      user : 'node',
-      host : '212.83.163.1',
+      user : 'root',
+      host : '47.95.6.132',
       ref  : 'origin/master',
-      repo : 'git@github.com:repo.git',
-      path : '/var/www/development',
+      repo : 'git@github.com:antwang/pm2deploy.git',
+      path : '/home/webApps/suyunfe',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env dev',
       env  : {
         NODE_ENV: 'dev'
