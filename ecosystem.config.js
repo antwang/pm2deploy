@@ -35,7 +35,7 @@ module.exports = {
       path : '/home/webApps/suyunfe',
       'pre-setup' : "echo 'commands or local script path to be run on the host before the setup process starts'",
       'post-setup': "echo 'commands or a script path to be run on the host after cloning the repo'",
-      'post-deploy' : 'npm install && pm2 startOrRestart current/ecosystem.config.js --env production',
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production',
       'pre-deploy-local' : "echo 'This is a local executed command'"
     },
     dev : {
